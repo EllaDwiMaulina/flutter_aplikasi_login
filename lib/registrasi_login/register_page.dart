@@ -1,54 +1,112 @@
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {
+  const RegisterPage({Key? key}) : super(key: key);
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Daftar'),
-        backgroundColor: Colors.blueAccent,
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: Color(0xFF4E7D96)),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.person, size: 100, color: Colors.blueAccent),
-            SizedBox(height: 20),
-            TextField(
-              decoration: InputDecoration(
-                  labelText: 'Nama Lengkap', border: OutlineInputBorder()),
-            ),
-            SizedBox(height: 20),
-            TextField(
-              decoration: InputDecoration(
-                  labelText: 'Email', border: OutlineInputBorder()),
-            ),
-            SizedBox(height: 20),
-            TextField(
-              decoration: InputDecoration(
-                  labelText: 'Password', border: OutlineInputBorder()),
-              obscureText: true,
-            ),
-            SizedBox(height: 20),
-            TextField(
-              decoration: InputDecoration(
-                  labelText: 'Confirm Password', border: OutlineInputBorder()),
-              obscureText: true,
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text('Daftar'),
-            ),
-            TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text(
-                  'Sudah punya akun ? Login',
-                  style: TextStyle(color: Colors.black),
-                ))
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const SizedBox(height: 20),
+              // Title
+              const Text(
+                'Create Account',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF4E7D96),
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Sign up to get started',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey[600],
+                ),
+              ),
+              const SizedBox(height: 40),
+              // Form Fields
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Full Name',
+                  prefixIcon: const Icon(Icons.person_outline, color: Color(0xFF4E7D96)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    borderSide: BorderSide.none,
+                  ),
+                  filled: true,
+                  fillColor: Colors.grey[100],
+                ),
+              ),
+              const SizedBox(height: 16),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Email',
+                  prefixIcon: const Icon(Icons.email_outlined, color: Color(0xFF4E7D96)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    borderSide: BorderSide.none,
+                  ),
+                  filled: true,
+                  fillColor: Colors.grey[100],
+                ),
+              ),
+              const SizedBox(height: 16),
+              TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: 'Password',
+                  prefixIcon: const Icon(Icons.lock_outline, color: Color(0xFF4E7D96)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    borderSide: BorderSide.none,
+                  ),
+                  filled: true,
+                  fillColor: Colors.grey[100],
+                ),
+              ),
+              const SizedBox(height: 16),
+              TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: 'Confirm Password',
+                  prefixIcon: const Icon(Icons.lock_outline, color: Color(0xFF4E7D96)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    borderSide: BorderSide.none,
+                  ),
+                  filled: true,
+                  fillColor: Colors.grey[100],
+                ),
+              ),
+              const SizedBox(height: 24),
+              // Register Button
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text(
+                  'Register',
+                  style: TextStyle(fontSize: 16),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
