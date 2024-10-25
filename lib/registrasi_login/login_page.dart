@@ -83,7 +83,7 @@ Widget build(BuildContext context) {
                     borderSide: BorderSide.none,
                   ),
                   filled: true,
-                  fillColor: Colors.grey[100],
+                  fillColor: const Color.fromARGB(255, 244, 205, 221),
                   suffixIcon: IconButton(
                     icon: const Icon(Icons.clear),
                     onPressed: () => _emailController.clear(),
@@ -102,7 +102,7 @@ Widget build(BuildContext context) {
                     borderSide: BorderSide.none,
                   ),
                   filled: true,
-                  fillColor: Colors.grey[100],
+                  fillColor: const Color.fromARGB(255, 244, 205, 221),
                   suffixIcon: IconButton(
                     icon: const Icon(Icons.clear),
                     onPressed: () => _passwordController.clear(),

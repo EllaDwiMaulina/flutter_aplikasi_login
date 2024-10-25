@@ -9,9 +9,9 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'Home',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Color.fromARGB(255, 11, 6, 6)),
         ),
-        backgroundColor: const Color(0xFF4E7D96),
+        backgroundColor: const Color.fromARGB(255, 244, 205, 221),
         actions: [
           IconButton(
             icon: const Icon(Icons.logout, color: Colors.white),
@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
-                    colors: [Color(0xFF4E7D96), Color(0xFF6A9BB2)],
+                    colors: [Color.fromARGB(255, 244, 205, 221), Color.fromARGB(255, 244, 205, 221)],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                     Text(
                       'Welcome back,',
                       style: TextStyle(
-                        color: Colors.white70,
+                        color: Color.fromARGB(179, 1, 1, 1),
                         fontSize: 16,
                       ),
                     ),
@@ -67,7 +67,7 @@ class HomePage extends StatelessWidget {
                     Text(
                       'Ella', // Ganti dengan nama kalian coy
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color.fromARGB(255, 11, 6, 6),
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
